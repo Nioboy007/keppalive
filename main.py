@@ -3,8 +3,8 @@ from telegram.ext import Updater, CommandHandler
 
 app = Flask(__name__)
 
-# Remove the 'use_context' parameter from the Updater initialization
-updater = Updater("7168860212:AAFQ9gMveau8z9hoWdwA4HoqjC8dp7hFcHE")
+# Replace "YOUR_BOT_TOKEN" with your actual Telegram bot token
+updater = Updater(token="7168860212:AAFQ9gMveau8z9hoWdwA4HoqjC8dp7hFcHE", use_context=True)
 
 # Define your Telegram bot handlers here
 def start(update, context):
@@ -23,6 +23,3 @@ if __name__ == '__main__':
 
     # Start the Flask app for the keep-alive endpoint
     app.run(debug=True)
-
-# Print a success message
-print("The error has been fixed. The 'use_context' parameter was removed from the Updater initialization.")
